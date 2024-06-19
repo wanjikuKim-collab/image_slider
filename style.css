@@ -49,11 +49,13 @@ header{
     height: 100vh;
     width: 100vw;
     margin-top: -50px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel .list .item{
+    width: 100%;
+    height: 100%;
     position: absolute;
     inset: 0;
 }
@@ -73,6 +75,8 @@ header{
     /* animation for moving the text in the vertical axis tx ty */
     transform: translate(-50%); 
     padding-right: 30%;
+    text-shadow: 0 5px 10px #0004;
+    box-sizing: border-box;
 }
 
 .carousel .list .item .content .creator{
@@ -106,7 +110,14 @@ header{
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
+    cursor:pointer;
+    transition: 0.2s;
 }
+
+.carousel .list .item .content button:hover{ 
+    background-color: #f1683ad8;
+    color: #fff;
+} 
 
 .carousel .list .item .content button:nth-child(2){
     background-color: transparent;
@@ -139,6 +150,7 @@ header{
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border-radius: 5px o 15px rgba(0 0 0 0.3);
 }
 
 .thumbnail .item .content{
@@ -151,3 +163,6 @@ header{
 .thumbnail .item .content .title{
     font-weight: bold;
 }
+
+/* arrows */
+
