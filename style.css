@@ -71,9 +71,9 @@ header{
     top: 20%;
     width: 1140px;
     max-width: 80%;
-    left: 50%;
+    left: 40%;
     /* animation for moving the text in the vertical axis tx ty */
-    transform: translate(-50%); 
+    transform: translate(-40%); 
     padding-right: 30%;
     text-shadow: 0 5px 10px #0004;
     box-sizing: border-box;
@@ -129,7 +129,7 @@ header{
 .thumbnail{
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 60%;
     width: max-content;
     z-index: 100;
     display: flex;
@@ -165,4 +165,77 @@ header{
 }
 
 /* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 600px;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d1cccc59;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrows button:hover{
+    background-color: #fff;
+    color: #555;
+}
+
+
+/* make first item appear */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .creator,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .name,
+.carousel .list .item:nth-child(1) .description,
+.carousel .list .item:nth-child(1) .buttons{
+    transform: translateY( 50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .name{
+    animation-delay: 1.4s;
+}
+
+.carousel .list .item:nth-child(1) .description{
+    animation-delay: 1.6s;
+}
+
+.carousel .list .item:nth-child(1) .buttons{
+    animation-delay: 1.8s;
+}
+
+
+/* effect on click of the next button */
