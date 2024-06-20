@@ -59,6 +59,16 @@ header {
   position: absolute;
   inset: 0;
 }
+.carousel .list .item .gradient{
+    width: 100%;
+    height: 100%; 
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, black, transparent);
+    opacity: .3;
+}
 
 .carousel .list .item img {
   width: 100%;
