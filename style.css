@@ -15,7 +15,7 @@ body {
 
 /* header section */
 header nav a {
-  margin-right: 50px;
+  margin-right: 40px;
   text-decoration: none;
   color: aliceblue;
   font-size: 14px;
@@ -365,5 +365,16 @@ header {
 @keyframes timeRunning{
     to{
         width: 0;
+    }
+}
+
+/* Responsive design on mobile */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+
+    .carousel .list .item .content .title{
+        font-size: 30px;
     }
 }
