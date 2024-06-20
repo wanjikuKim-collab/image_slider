@@ -21,7 +21,7 @@ let timeRunning = 3000;
 let runTimeOut;
 
 // automatic run time
-let autoTime = 6000;
+let autoTime = 7000;
 let runAutoTime = setTimeout(() => {
   next.click() // system automatically clicks the next button after 7s
 }, autoTime);
