@@ -1,9 +1,10 @@
 let carousel = document.querySelector(".carousel");
 let list = document.querySelector(".list");
 let thumbnail = document.querySelector(".thumbnail");
-
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
+let runningTime = document.querySelector('.time');
+
 
 // Function for next button
 next.onclick = function () {
@@ -20,9 +21,9 @@ let timeRunning = 3000;
 let runTimeOut;
 
 // automatic run time
-let autoTime = 5000;
+let autoTime = 6000;
 let runAutoTime = setTimeout(() => {
-  next.click(); // system automatically clicks the next button after 7s
+  next.click() // system automatically clicks the next button after 7s
 }, autoTime);
 
 function showSlider(direction) {
@@ -50,4 +51,7 @@ function showSlider(direction) {
   }, timeRunning);
 
   clearTimeout(runAutoTime);
+  runAutoTime = setTimeout(()=>{
+    next.click()
+  },autoTime)
 }
