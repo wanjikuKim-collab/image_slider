@@ -262,7 +262,7 @@ header {
 }
 
 /* moving the first thumbnail item to the end at the beginning */
-.thumbnail .item:nth-last-child(1) {
+.carousel.next .thumbnail .item:nth-last-child(1) {
   /* when image is activated its thumbnail image must move to the end */
   /* initially we  can't see it since the w is 0 */
   width: 0;
@@ -314,7 +314,7 @@ header {
   }
 }
 
-.thumbnail .item:nth-child(1) {
+.carousel.prev .thumbnail .item:nth-child(1) {
   width: 0;
   overflow: hidden;
   opacity: 0;
@@ -322,11 +322,11 @@ header {
 }
 
 /* hide content of 2nd item from oerlapping w the first item */
-.carousel .list .item:nth-child(2) .creator,
-.carousel .list .item:nth-child(2) .title,
-.carousel .list .item:nth-child(2) .name,
-.carousel .list .item:nth-child(2) .description,
-.carousel .list .item:nth-child(2) .buttons{
+.carousel.prev .list .item:nth-child(2) .creator,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .name,
+.carousel.prev .list .item:nth-child(2) .description,
+.carousel.prev .list .item:nth-child(2) .buttons{
     animation: contentOut 1.5s linear 1s forwards;
 }
 
@@ -342,4 +342,28 @@ header {
 .carousel.next .arrows button,
 .carousel.prev .arrows button{
     pointer-events: none;
+}
+
+/* time */
+.time{
+    /* this creates the timer animation at the top of the page */
+    width: 0;
+    height: 5px;
+    background-color: #f1683a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning{
+    to{
+        width: 0;
+    }
 }
